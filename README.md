@@ -77,7 +77,7 @@ Configure Onesignal Plugin. The same steps are in plugin's Setup guide.
 # Android Configuration
 # iOS Configuration
 
-https://github.com/ecma73/byvAdmin/blob/master/push.png
+<img src="https://github.com/ecma73/byvAdmin/blob/master/push.png">
 
 NOTE Send notifications additionally to iOS & Android platforms switch must be OFF.
 Quick Start
