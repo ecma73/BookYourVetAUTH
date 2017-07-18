@@ -1,0 +1,8 @@
+{
+  "name": "WordApp",
+  "app_id": "03c6a859",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
+}
