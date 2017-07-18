@@ -194,6 +194,6 @@ User UiD - 8UIQ4ecHFKOAHjh73rVHpH7V4pF3
 7appsinc@gmail.com ::
 User UiD - xUQrkoY5QeWcoLbplYUWZkZRk0k2
 
-# Contact me JustEd or NareKaru using above email credentials - Thanks so much...
+# Contact me JustEd or NarenKaru using above email credentials - Thanks so much...
 
 
