@@ -53,11 +53,11 @@ Contributors to the Apache Cordova project include :
 	▪	Microsoft
 	▪	Mozilla
 
-#OneSignal 
+# OneSignal 
 
 OneSignal is mobile and web push notification and push messaging service and API. Developers and marketers use OneSignal to deliver and track targeted transactional and promotional messages to their customers.
 
-#Firebase 
+# Firebase 
 
 Firebase is a mobile and web application development platform. Firebase is made up of complementary features that developers can mix-and-match to fit their needs. The team is based in San Francisco and Mountain View, California. The company was founded in 2011 by Andrew Lee and James Tamplin.[1] Firebase's initial product was a realtime database, which provides an API that allows developers to store and sync data across multiple clients. Over time, it has expanded its product line to become a full suite for app development. The company was acquired by Google in October 2014 and a significant number of new features were featured in May 2016 at Google I/O.
 
@@ -77,7 +77,7 @@ Configure Onesignal Plugin. The same steps are in plugin's Setup guide.
 # Android Configuration
 # iOS Configuration
 
-Untitled-1.png
+https://github.com/ecma73/byvAdmin/blob/master/push.png
 
 NOTE Send notifications additionally to iOS & Android platforms switch must be OFF.
 Quick Start
@@ -99,17 +99,16 @@ Onesignal Push Setup
 
 5. Install App to your Phone and run it.
 
+http://test.1871.by/documentation/v2/assets/images/finish.png
+
 6. Go to Onesignal Dashboard select your App and click "FINISH APP SETUP"
-
-
+https://github.com/ecma73/byvAdmin/blob/master/sdk.png
 
 7. Select SDK "Phonegap, Cordova, Ionic" click "NEXT" and Click "Check Subscribed Users"
+https://github.com/ecma73/byvAdmin/blob/master/done.png
 
+# Set Up App
 
-
-
-
-Set Up App
 Open in any text editor config.js file (www/js) and make changes, follow the instructions:
  
 Replace with your Wordpress Blog WP REST API url ex.: myblog.com required '/wp-json/wp/v2/' at the end
@@ -158,22 +157,24 @@ These settings provide you even more control over the instances of when and how 
  
 An administrator must always approve the comment - Select this option to force comments to be approved by a blog user or owner having the proper Role to approve comments, even if the comments appear to be spam . See the Comment Moderation options below regarding spam. 
 Comment author must have a previously approved comment - Check the box to insure comments are only posted if the comment author's email address matches the address of a previously approved comment, otherwise, the comment is held for moderation. Comments from blacklisted email addresses (those listed in the Local Spam Words Text Box) are held for moderation regardless of whitelist status.
-Build App
+
+# Build App
+
+https://github.com/ecma73/byvAdmin/blob/master/gap-login.png
 ZIP all files again and upload to http://build.phonegap.com. 
  
 Login or create new account
-
-
 Click “+new app” button
-
+https://github.com/ecma73/byvAdmin/blob/master/gap-newapp.png
 
 Than click tab ”private” and “Upload a .zip file”
-
+https://github.com/ecma73/byvAdmin/blob/master/gap-upload.png
 
 Last step, click “Ready to build” button and wait 1-2 min
-
+https://github.com/ecma73/byvAdmin/blob/master/gap-build.png
 
 Download your .apk and install. DONE! ))
+https://github.com/ecma73/byvAdmin/blob/master/gap-apk.png
 
 ##Take Note:
 
