@@ -1,8 +1,9 @@
 # byvAdmin -
 A PhoneGap/Cordova Wordpress Hybrid App :
-by: Hybrionic ~ 7AppsIonic Asia - https://app.hybrionic.cloudns.asia
-email: hybrionic.license@gmail.com
 
+## By: Hybrionic ~ 7AppsIonic Asia - https://app.hybrionic.cloudns.asia
+
+email: hybrionic.license@gmail.com
 Thank you for your interest in byvAdmin development. 
 
 ## Project API's:
@@ -91,11 +92,20 @@ Click "+NEW APP" and add unzipped WordApp folder than click "Serve"
 3. Configure your App
 4. Build your App
 5. Install App to your Phone and run it.
+## Impressions
 
-<img src=“http://test.1871.by/documentation/v2/assets/images/finish.png”>
+<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/1.1.png" height="400">
+<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/6.png" height="400">
+<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/1.png" height="400">
+<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/2.png" height="400">
+<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/3.png" height="400">
+<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/4.png" height="400">
+<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/5.png" height="400">
+
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/finish.png” height="400">
 6. Go to Onesignal Dashboard select your App and click "FINISH APP SETUP"
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/sdk.png“>
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/sdk.png“ height="400">>
 7. Select SDK "Phonegap, Cordova, Ionic" click "NEXT" and Click "Check Subscribed Users"
 
 <img src=“https://github.com/ecma73/byvAdmin/blob/master/done.png“>
