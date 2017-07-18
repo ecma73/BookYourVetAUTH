@@ -173,7 +173,18 @@ Download your .apk and install. DONE! ))
 
 <img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-apk.png“>
 
-##Take Note:
+The recommended way to add a complete sign-in system to your app.
+
+# FirebaseUI 
+provides a drop-in auth solution that handles the UI flows for signing in users with email addresses and passwords, phone numbers, and with popular federated identity providers, including Google Sign-In and Facebook Login.
+
+The FirebaseUI Auth component implements best practices for authentication on mobile devices and websites, which can maximize sign-in and sign-up conversion for your app. It also handles edge cases like account recovery and account linking that can be security sensitive and error-prone to handle correctly.
+
+FirebaseUI can be easily customized to fit in with the rest of your app's visual style, and it is open source, so you aren't constrained in realizing the user experience you want.
+Source Url : 
+https://opensource.google.com/projects/firebaseui
+
+# Take Note:
 
 Current - FWS Authentication Users for this Project :
 
