@@ -94,14 +94,6 @@ Click "+NEW APP" and add unzipped WordApp folder than click "Serve"
 5. Install App to your Phone and run it.
 ## Impressions
 
-<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/1.1.png" height="400">
-<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/6.png" height="400">
-<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/1.png" height="400">
-<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/2.png" height="400">
-<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/3.png" height="400">
-<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/4.png" height="400">
-<img src="https://github.com/7AppsIonic/ezyDos1.1/blob/master/www/img/5.png" height="400">
-
 <img src=“https://github.com/ecma73/byvAdmin/blob/master/finish.png” height="400">
 6. Go to Onesignal Dashboard select your App and click "FINISH APP SETUP"
 
