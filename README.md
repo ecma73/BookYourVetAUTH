@@ -74,8 +74,8 @@ Onesignal Filter (in Wordpress Plugin folder)
  
 B. Configure Onesignal Plugin. The same steps are in plugin's Setup guide.
 
-# Android Configuration
-# iOS Configuration
+# <a href="https://documentation.onesignal.com/docs/generate-a-google-server-api-key">Android Configuration</a>
+# <a href="https://documentation.onesignal.com/docs/generate-an-ios-push-certificate">iOS Configuration</a>
 
 <img src="https://github.com/ecma73/byvAdmin/blob/master/push.png">
 
@@ -103,51 +103,44 @@ Click "+NEW APP" and add unzipped WordApp folder than click "Serve"
 ## Set Up byvApp
 
 Open in any text editor config.js file (www/js) and make changes, follow the instructions:
- 
-Replace with your Wordpress Blog WP REST API url ex.: myblog.com required '/wp-json/wp/v2/' at the end
+Replace with your Wordpress Blog WP REST API url ex.: myblog.com required '/wp-json/wp/v2/' at the end:
  
 .constant('WORDPRESS_API_URL', 'http://<WORDPRESS_API_URL>/wp-json/wp/v2/')
  
 Replace with your Google Project Number https://documentation.onesignal.com/docs/generate-a-google-server-api-key
- 
 .constant('GOOGLE_PROJECT_NUMBER', '<Sender ID>')
  
 Replace with your OneSignal AppId https://documentation.onesignal.com/docs/accounts-and-keys#section-keys-ids
- 
 .constant('ONESIGNAL_APP_ID', '<ONESIGNAL_APP_ID>')
  
 Change color your Ionic application to light, stable, positive, calm, balanced, energized, assertive, royal or dark 
- 
 .constant('IONIC_APP_COLOR', 'calm')
  
 Change Posts page template to cards, cards2, list
- 
 .constant('POSTS_TEMPLATE', 'cards')
  
 Replace with your Android package name ex. 'com.google.android.apps.maps' (change it in config.xml root 'www' folder) and IOS app ID
- 
 .constant('ANDROID_PACKAGE_NAME', '<ANDROID_PACKAGE_NAME>')
 .constant('IOS_APP_ID', '<my_app_id>')
  
 Replace with your Primary Email to send Feedback
- 
 .constant('PRIMARY_EMAIL', 'app@myapp.com')
  
-Replace with email to send copy Feedback or leave empty
- 
+Replace with email to send copy Feedback or leave empty 
 .constant('COPY_EMAIL', 'app2@myapp.com')
  
 Replace with phone number for send SMS start with '+' ex. +0112223344
- 
 .constant('SMS_PHONE_NUMBER', '<SMS_PHONE_NUMBER>');
-Comment Configuration
+
+### Comment Configuration
+
 Go to Settings - Discussion in your Wordpress Dashboard and check
  
 Comment author must fill out name and e-mail - Check this box as a way to force spammers to do a bit of extra work. In reality, the name and e-mail address are not verified in any way prior to the comment being submitted. Most legitimate commenters are more than willing to fill out a name and e-mail address.
-Next step Before a comment appears:
+
+### Next step Before a comment appears:
  
 These settings provide you even more control over the instances of when and how comments are posted.
- 
 An administrator must always approve the comment - Select this option to force comments to be approved by a blog user or owner having the proper Role to approve comments, even if the comments appear to be spam . See the Comment Moderation options below regarding spam. 
 Comment author must have a previously approved comment - Check the box to insure comments are only posted if the comment author's email address matches the address of a previously approved comment, otherwise, the comment is held for moderation. Comments from blacklisted email addresses (those listed in the Local Spam Words Text Box) are held for moderation regardless of whitelist status.
 
