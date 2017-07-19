@@ -1,4 +1,4 @@
-angular.module('WordApp.config', [])
+angular.module('WordApp.config', ['starter'])
 
 // Replace with your Wordpress Blog WP REST API url
 .constant('WORDPRESS_API_URL', 'http://ezymekah.com/app/byv_app/wp-json/wp/v2/')
