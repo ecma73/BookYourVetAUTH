@@ -1,6 +1,23 @@
 # byvAdmin -
 A PhoneGap/Ionic Cordova WP Native Hybrid App :
 
+# 1. How to change splash screen and app icon
+Go to www/res folder and replace to you own png files
+
+# 2. How to change app name, app version and app id
+Go to www folder, open config.xml file and make changes in this line, change id, app version.
+
+<widget id="com.ionicframework.byvapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+//In this line change your app name
+<name>BookYourApp</name>
+//In this line change your app description
+<description>WordApp Ionic Framework and Cordova project.</description>
+//In this line change your app author data
+ <author email="you@example.com" href="http://example.com.com/">Your Name Here</author>
+ 
+# 3. Is it required to install OneSignal plugins?
+No, if you not planning send Push Notifications directly from WordPress dashboard and have plans send Notifications only from OneSignal dashboard you can not install OneSignal plugins to your WordPress blog.
+
 ## By: 7AppsIonic - Hybrionic .< 
 7AppsIonic Asia - https://app.hybrionic.cloudns.asia
 
