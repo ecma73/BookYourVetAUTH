@@ -1,5 +1,6 @@
-# byvAdmin -
-A PhoneGap/Ionic Cordova WP Native Hybrid App :
+# BookYourVetAUTH -
+Backend to BookYourVetApp.. 
+PhoneGap/Ionic Cordova WP Native Hybrid App :
 
 # 1. How to change splash screen and app icon
 Go to www/res folder and replace to you own png files
