@@ -1,4 +1,4 @@
-angular.module('WordApp.directives', [])
+angular.module('WordApp.directives', ['starter'])
 
 /**
  * Text size directive.
