@@ -1,4 +1,8 @@
 angular.module('WordApp.controllers', [])
+ 
+.controller('AppCtrl', function() {})
+.controller('LoginCtrl', function() {})
+.controller('DashCtrl', function() {});
 
 .controller('AppCtrl', function($scope, IONIC_APP_COLOR) {
     $scope.color = IONIC_APP_COLOR;
