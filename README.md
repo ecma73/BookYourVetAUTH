@@ -1,26 +1,27 @@
 # byvAdmin -
-A PhoneGap/Cordova Wordpress Hybrid App :
+A PhoneGap/Ionic Cordova WP Native Hybrid App :
 
-## By: Hybrionic ~ 7AppsIonic Asia - https://app.hybrionic.cloudns.asia
+## By: 7AppsIonic - Hybrionic .< 
+7AppsIonic Asia - https://app.hybrionic.cloudns.asia
 
-email: hybrionic.license@gmail.com
+Email: hybrionic.license@gmail.com
 Thank you for your interest in byvAdmin development. 
 
 ## Project API's:
 Native Backend are built using below tech framework & API's :
 
-### WordPress CMS
+### WordPress CMS - https://www.wordpress.org/
 is a free and open-source content management system (CMS) based on PHP and MySQL. WordPress is installed on a web server that is either part of an Internet hosting service or a network host in its own right. The first case may be a service like WordPress.com, for example, and the second case could be a computer running the software package WordPress.org. A local computer may be used for single-user testing and learning purposes. Features include a plugin architecture and a template system. WordPress was used by more than 27.5% of the top 10 million websites as of February 2017. WordPress is reportedly the most popular website management or blogging system in use on the Web, supporting more than 60 million websites.
 
 WordPress was released on May 27, 2003, by its founders, Matt Mullenweg and Mike Little, as a fork of b2/cafelog. WordPress is released under the GPLv2 (or later) license.
 
-### ionic Cordova Framework 
+### ionic Cordova Framework - https://ionicframework.com/
 
 Ionic Cordova is a complete open-source SDK for hybrid mobile app development. The original version was released in 2013 and built on top of AngularJS and Apache Cordova. The more recent release, known as Ionic 2 or simply "Ionic", are built on Angular. Ionic provides tools and services for developing hybrid mobile apps using Web technologies like CSS, HTML5, and Sass. Apps can be built with these Web technologies and then distributed through native app stores to be installed on devices by leveraging Cordova. Ionic was created by Max Lynch, Ben Sperry, and Adam Bradley of Drifty Co. in 2013.
 
 Ionic Creator is a drag-and-drop interface building tool. App Builder for Ionic is also provided by Appery.io.
 
-### Phonegap 
+### Phonegap - https://phonegap.com/
 Apache Cordova (formerly PhoneGap) is a mobile application development framework originally created by Nitobi. Adobe Systems purchased Nitobi in 2011, rebranded it as PhoneGap, and later released an open source version of the software called Apache Cordova.[3] Apache Cordova enables software programmers to build applications for mobile devices using CSS3, HTML5, and JavaScript instead of relying on platform-specific APIs like those in Android, iOS, or Windows Phone.[4] It enables wrapping up of CSS, HTML, and JavaScript code depending upon the platform of the device. It extends the features of HTML and JavaScript to work with the device. The resulting applications are hybrid, meaning that they are neither truly native mobile application (because all layout rendering is done via Web views instead of the platform's native UI framework) nor purely Web-based (because they are not just Web apps, but are packaged as apps for distribution and have access to native device APIs). Mixing native and hybrid code snippets has been possible since version.
 
 The software was previously called just "PhoneGap", then "Apache Callback". As open-source software, Apache Cordova allows wrappers around it, such as Appery.io or Intel XDK.
@@ -54,11 +55,11 @@ Contributors to the Apache Cordova project include :
 	▪	Microsoft
 	▪	Mozilla
 
-### OneSignal 
+### OneSignal - https://onesignal.com
 
 OneSignal is mobile and web push notification and push messaging service and API. Developers and marketers use OneSignal to deliver and track targeted transactional and promotional messages to their customers.
 
-### Firebase 
+### Firebase - https://console.firebase.google.com
 
 Firebase is a mobile and web application development platform. Firebase is made up of complementary features that developers can mix-and-match to fit their needs. The team is based in San Francisco and Mountain View, California. The company was founded in 2011 by Andrew Lee and James Tamplin.[1] Firebase's initial product was a realtime database, which provides an API that allows developers to store and sync data across multiple clients. Over time, it has expanded its product line to become a full suite for app development. The company was acquired by Google in October 2014 and a significant number of new features were featured in May 2016 at Google I/O.
 
@@ -100,7 +101,7 @@ Click "+NEW APP" and add unzipped WordApp folder than click "Serve"
 <img src=“https://github.com/ecma73/byvAdmin/blob/master/sdk.png“ height="400">>
 7. Select SDK "Phonegap, Cordova, Ionic" click "NEXT" and Click "Check Subscribed Users"
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/done.png“>
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/done.png“ height="300">
 
 ## Set Up byvApp
 
@@ -148,22 +149,22 @@ Comment author must have a previously approved comment - Check the box to insure
 
 ## Build App
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-login.png“>
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-login.png“ height="300">
 ZIP all files again and upload to http://build.phonegap.com. 
  
 Login or create new account
 Click “+new app” button
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-newapp.png“>
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-newapp.png“ height="300">
 Than click tab ”private” and “Upload a .zip file”
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-upload.png“>
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-upload.png“ height="300">
 Last step, click “Ready to build” button and wait 1-2 min
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-build.png“>
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-build.png“ height="300">
 Download your .apk and install. DONE! ))
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-apk.png“>
+<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-apk.png“ height="300">
 
 The recommended way to add a complete sign-in system to your app.
 
