@@ -134,7 +134,7 @@ angular.module('WordApp.services', [])
 
 })
 
-.factory($localstorage', ['$window', 'AuthInterceptor', function($window, $rootScope, $q, AUTH_EVENTS) {
+.factory($localstorage','AuthInterceptor',function($window,$rootScope,$q,AUTH_EVENTS, ['$window') {
  return {
   set: function(key, value) {
   $window.localStorage[key] = value;
