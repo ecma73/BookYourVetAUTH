@@ -1,5 +1,112 @@
 angular.module('WordApp.controllers', ['starter'])
 
+.controller('CategoriesCtrl', function($scope, $http, DataLoader, $ionicLoading, $timeout, $ionicSlideBoxDelegate, WORDPRESS_API_URL, IONIC_APP_COLOR, $log) {
+    $scope.color = IONIC_APP_COLOR;
+	
+    // Show All Categories
+    var categoriesApi = WORDPRESS_API_URL + 'categories';
+	
+	// Include Categories IDs, don't forget make changes in PostsCtrl
+    //var categoriesApi = WORDPRESS_API_URL + 'categories?include=1,2,3';
+
+    $scope.moreItems = false;
+
+    $scope.loadCategories = function() {
+
+        $ionicLoading.show({
+            noBackdrop: true
+        });
+
+        // Get all of our categories
+        DataLoader.get(categoriesApi).then(function(response) {
+
+            $scope.categories = response.data;
+
+            $scope.moreItems = true;
+
+            $log.log(categoriesApi, response.data);
+
+            $ionicLoading.hide();
+        }, function(response) {
+            $log.log(categoriesApi, response.data);
+            $ionicLoading.hide();
+        });
+
+    }
+
+    // Load posts on page load
+    $scope.loadCategories();
+
+    paged = 2;
+
+    // Load more (infinite scroll)
+    $scope.loadMore = function() {
+
+        if (!$scope.moreItems) {
+            return;
+        }
+
+        var pg = paged++;
+
+        $log.log('loadMore ' + pg);
+
+        $timeout(function() {
+
+            DataLoader.get(categoriesApi + '?page=' + pg).then(function(response) {
+
+                angular.forEach(response.data, function(value, key) {
+                    $scope.categories.push(value);
+                });
+
+                if (response.data.length <= 0) {
+                    $scope.moreItems = false;
+                }
+            }, function(response) {
+                $scope.moreItems = false;
+                $log.error(response);
+            });
+
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+            $scope.$broadcast('scroll.resize');
+
+        }, 1000);
+
+    }
+
+    $scope.moreDataExists = function() {
+        return $scope.moreItems;
+    }
+
+    // Pull to refresh
+    $scope.doRefresh = function() {
+
+        $timeout(function() {
+
+            $scope.loadCategories();
+
+            //Stop the ion-refresher from spinning
+            $scope.$broadcast('scroll.refreshComplete');
+
+        }, 1000);
+
+    }
+
+    // Accordion list
+    $scope.group = [];
+
+    $scope.toggleGroup = function(group) {
+        if ($scope.isGroupShown(group)) {
+            $scope.shownGroup = null;
+        } else {
+            $scope.shownGroup = group;
+        }
+    };
+    $scope.isGroupShown = function(group) {
+        return $scope.shownGroup === group;
+    };
+
+})
+
  .controller('AppCtrl', function($scope, $state, $ionicPopup, AuthService, AUTH_EVENTS) {
   $scope.username = AuthService.username();
  
@@ -379,113 +486,6 @@ angular.module('WordApp.controllers', ['starter'])
 
 })
 
-.controller('CategoriesCtrl', function($scope, $http, DataLoader, $ionicLoading, $timeout, $ionicSlideBoxDelegate, WORDPRESS_API_URL, IONIC_APP_COLOR, $log) {
-    $scope.color = IONIC_APP_COLOR;
-	
-    // Show All Categories
-    var categoriesApi = WORDPRESS_API_URL + 'categories';
-	
-	// Include Categories IDs, don't forget make changes in PostsCtrl
-    //var categoriesApi = WORDPRESS_API_URL + 'categories?include=1,2,3';
-
-    $scope.moreItems = false;
-
-    $scope.loadCategories = function() {
-
-        $ionicLoading.show({
-            noBackdrop: true
-        });
-
-        // Get all of our categories
-        DataLoader.get(categoriesApi).then(function(response) {
-
-            $scope.categories = response.data;
-
-            $scope.moreItems = true;
-
-            $log.log(categoriesApi, response.data);
-
-            $ionicLoading.hide();
-        }, function(response) {
-            $log.log(categoriesApi, response.data);
-            $ionicLoading.hide();
-        });
-
-    }
-
-    // Load posts on page load
-    $scope.loadCategories();
-
-    paged = 2;
-
-    // Load more (infinite scroll)
-    $scope.loadMore = function() {
-
-        if (!$scope.moreItems) {
-            return;
-        }
-
-        var pg = paged++;
-
-        $log.log('loadMore ' + pg);
-
-        $timeout(function() {
-
-            DataLoader.get(categoriesApi + '?page=' + pg).then(function(response) {
-
-                angular.forEach(response.data, function(value, key) {
-                    $scope.categories.push(value);
-                });
-
-                if (response.data.length <= 0) {
-                    $scope.moreItems = false;
-                }
-            }, function(response) {
-                $scope.moreItems = false;
-                $log.error(response);
-            });
-
-            $scope.$broadcast('scroll.infiniteScrollComplete');
-            $scope.$broadcast('scroll.resize');
-
-        }, 1000);
-
-    }
-
-    $scope.moreDataExists = function() {
-        return $scope.moreItems;
-    }
-
-    // Pull to refresh
-    $scope.doRefresh = function() {
-
-        $timeout(function() {
-
-            $scope.loadCategories();
-
-            //Stop the ion-refresher from spinning
-            $scope.$broadcast('scroll.refreshComplete');
-
-        }, 1000);
-
-    }
-
-    // Accordion list
-    $scope.group = [];
-
-    $scope.toggleGroup = function(group) {
-        if ($scope.isGroupShown(group)) {
-            $scope.shownGroup = null;
-        } else {
-            $scope.shownGroup = group;
-        }
-    };
-    $scope.isGroupShown = function(group) {
-        return $scope.shownGroup === group;
-    };
-
-})
-
 // Auth
 .controller('CategoryCtrl', function($scope, $state, $stateParams, $http, DataLoader, $ionicLoading, $timeout, $ionicSlideBoxDelegate, WORDPRESS_API_URL, IONIC_APP_COLOR, $log) {
     $scope.color = IONIC_APP_COLOR;
@@ -526,6 +526,38 @@ angular.module('WordApp.controllers', ['starter'])
     });
   };
 })
+      
+.controller('DashCtrl', function($scope, $state, $http, $ionicPopup, AuthService) {
+  $scope.logout = function() {
+    AuthService.logout();
+    $state.go('login');
+  };
+ 
+  $scope.performValidRequest = function() {
+    $http.get('http://localhost:8100/valid').then(
+      function(result) {
+        $scope.response = result;
+      });
+  };
+ 
+  $scope.performUnauthorizedRequest = function() {
+    $http.get('http://localhost:8100/notauthorized').then(
+      function(result) {
+        // No result here..
+      }, function(err) {
+        $scope.response = err;
+      });
+  };
+ 
+  $scope.performInvalidRequest = function() {
+    $http.get('http://localhost:8100/notauthenticated').then(
+      function(result) {
+        // No result here..
+      }, function(err) {
+        $scope.response = err;
+      });
+  };
+});
 
         // Get all of our posts in category
         DataLoader.get(categoryApi).then(function(response) {
