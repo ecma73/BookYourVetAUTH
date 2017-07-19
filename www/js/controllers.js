@@ -1,4 +1,4 @@
-angular.module('WordApp.controllers', [])
+angular.module('WordApp.controllers', ['starter'])
  
 .controller('AppCtrl', function() {})
 .controller('LoginCtrl', function() {})
