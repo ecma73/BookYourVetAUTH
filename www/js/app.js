@@ -3,7 +3,7 @@
 // 'WpApp' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'WpApp.controllers' is found in controllers.js
-angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', 'WordApp.filters', 'WordApp.directives', 'WordApp.config', 'angular-cache', 'angularMoment', 'ionicLazyLoad'])
+angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', 'WordApp.filters', 'WordApp.directives', 'WordApp.config', 'angular-cache', 'angularMoment', 'ionicLazyLoad','starter'])
 
   .run(function($httpBackend){
   $httpBackend.whenGET(/templates\/\w+.*/).passThrough();
