@@ -5,9 +5,16 @@
 // 'WpApp.controllers' is found in controllers.js
 angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', 'WordApp.filters', 'WordApp.directives', 'WordApp.config', 'angular-cache', 'angularMoment', 'ionicLazyLoad','starter'])
 
-  .run(function($httpBackend){
+.run(function($httpBackend){
+  $httpBackend.whenGET('http://localhost:8100/valid')
+        .respond({message: 'This is my valid response!'});
+  $httpBackend.whenGET('http://localhost:8100/notauthenticated')
+        .respond(401, {message: "Not Authenticated"});
+  $httpBackend.whenGET('http://localhost:8100/notauthorized')
+        .respond(403, {message: "Not Authorized"});
+ 
   $httpBackend.whenGET(/templates\/\w+.*/).passThrough();
-})
+ })
 
   .run(function($ionicPlatform, $state, ONESIGNAL_APP_ID, GOOGLE_PROJECT_NUMBER, $rootScope, $ionicHistory) {
     $ionicPlatform.ready(function() {
