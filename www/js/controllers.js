@@ -486,6 +486,7 @@ angular.module('WordApp.controllers', ['starter'])
 
 })
 
+// Auth
 .controller('CategoryCtrl', function($scope, $state, $stateParams, $http, DataLoader, $ionicLoading, $timeout, $ionicSlideBoxDelegate, WORDPRESS_API_URL, IONIC_APP_COLOR, $log) {
     $scope.color = IONIC_APP_COLOR;
 
@@ -508,6 +509,23 @@ angular.module('WordApp.controllers', ['starter'])
         $ionicLoading.show({
             noBackdrop: true
         });
+      LoginCtrl for login actionJavaScript
+    
+.controller('LoginCtrl', function($scope, $state, $ionicPopup, AuthService) {
+  $scope.data = {};
+ 
+  $scope.login = function(data) {
+    AuthService.login(data.username, data.password).then(function(authenticated) {
+      $state.go('main.dash', {}, {reload: true});
+      $scope.setCurrentUsername(data.username);
+    }, function(err) {
+      var alertPopup = $ionicPopup.alert({
+        title: 'Login failed!',
+        template: 'Please check your credentials!'
+      });
+    });
+  };
+})
 
         // Get all of our posts in category
         DataLoader.get(categoryApi).then(function(response) {
