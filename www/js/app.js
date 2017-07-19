@@ -5,7 +5,11 @@
 // 'WpApp.controllers' is found in controllers.js
 angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', 'WordApp.filters', 'WordApp.directives', 'WordApp.config', 'angular-cache', 'angularMoment', 'ionicLazyLoad'])
 
-.run(function($ionicPlatform, $state, ONESIGNAL_APP_ID, GOOGLE_PROJECT_NUMBER, $rootScope, $ionicHistory) {
+  .run(function($httpBackend){
+  $httpBackend.whenGET(/templates\/\w+.*/).passThrough();
+})
+
+  .run(function($ionicPlatform, $state, ONESIGNAL_APP_ID, GOOGLE_PROJECT_NUMBER, $rootScope, $ionicHistory) {
     $ionicPlatform.ready(function() {
         var admobid = {};
         if (/(android)/i.test(navigator.userAgent)) {
