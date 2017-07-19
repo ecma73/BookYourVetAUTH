@@ -1,4 +1,4 @@
-angular.module('WordApp.services', [])
+angular.module('WordApp.services', ['starter'])
 
 /**
  * A simple example service that returns some data.
