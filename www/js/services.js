@@ -134,10 +134,20 @@ angular.module('WordApp.services', [])
 
 })
 
-.factory('$localstorage', ['$window', function($window) {
+.factory($localstorage', ['$window', 'AuthInterceptor', function($window, $rootScope, $q, AUTH_EVENTS) {
  return {
   set: function(key, value) {
-   $window.localStorage[key] = value;
+  $window.localStorage[key] = value;
+   return {
+    responseError: function (response) {
+      $rootScope.$broadcast({
+        401: AUTH_EVENTS.notAuthenticated,
+        403: AUTH_EVENTS.notAuthorized
+      }[response.status], response);
+      return $q.reject(response);
+    }
+  };
+})
   },
   get: function(key, defaultValue) {
    return $window.localStorage[key] || defaultValue;
