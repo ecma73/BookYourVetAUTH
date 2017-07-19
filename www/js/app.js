@@ -1,8 +1,8 @@
-// Ionic WordApp App
+// Hybrionic WpApp
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'WordApp' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'WpApp' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'WordApp.controllers' is found in controllers.js
+// 'WpApp.controllers' is found in controllers.js
 angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', 'WordApp.filters', 'WordApp.directives', 'WordApp.config', 'angular-cache', 'angularMoment', 'ionicLazyLoad'])
 
 .run(function($ionicPlatform, $state, ONESIGNAL_APP_ID, GOOGLE_PROJECT_NUMBER, $rootScope, $ionicHistory) {
@@ -184,3 +184,51 @@ angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', '
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/posts');
 });
+
+.config(function ($stateProvider, $urlRouterProvider, USER_ROLES) {
+  $stateProvider
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+  .state('main', {
+    url: '/',
+    abstract: true,
+    templateUrl: 'templates/main.html'
+  })
+  .state('main.dash', {
+    url: 'main/dash',
+    views: {
+        'dash-tab': {
+          templateUrl: 'templates/dashboard.html',
+          controller: 'DashCtrl'
+        }
+    }
+  })
+  .state('main.public', {
+    url: 'main/public',
+    views: {
+        'public-tab': {
+          templateUrl: 'templates/public.html'
+        }
+    }
+  })
+  .state('main.admin', {
+    url: 'main/admin',
+    views: {
+        'admin-tab': {
+          templateUrl: 'templates/admin.html'
+        }
+    },
+    data: {
+      authorizedRoles: [USER_ROLES.admin]
+    }
+  });
+  
+  // Thanks to Ben Noblet!
+  $urlRouterProvider.otherwise(function ($injector, $location) {
+    var $state = $injector.get("$state");
+    $state.go("main.dash");
+  });
+})
