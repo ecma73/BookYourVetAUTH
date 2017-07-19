@@ -1,4 +1,4 @@
-angular.module('WordApp.filters', [])
+angular.module('WordApp.filters', ['starter'])
 
 .filter('html_filters', function($sce) {
 
