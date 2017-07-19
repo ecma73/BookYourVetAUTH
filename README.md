@@ -95,13 +95,15 @@ Click "+NEW APP" and add unzipped WordApp folder than click "Serve"
 5. Install App to your Phone and run it.
 ## Impressions
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/finish.png” height="400">
+<img src=“http://test.1871.by/documentation/v2/assets/finish.png” height="400">
 6. Go to Onesignal Dashboard select your App and click "FINISH APP SETUP"
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/sdk.png“ height="400">>
+http://test.1871.by/documentation/v2/assets/images/ionic-lab.png
+
+<img src=“http://test.1871.by/documentation/v2/assets/sdk.png“ height="400">>
 7. Select SDK "Phonegap, Cordova, Ionic" click "NEXT" and Click "Check Subscribed Users"
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/done.png“ height="300">
+<img src=“http://test.1871.by/documentation/v2/assets/done.png“ height="300">
 
 ## Set Up byvApp
 
@@ -149,22 +151,22 @@ Comment author must have a previously approved comment - Check the box to insure
 
 ## Build App
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-login.png“ height="300">
+<img src=“http://test.1871.by/documentation/v2/assets/gap-login.png“ height="300">
 ZIP all files again and upload to http://build.phonegap.com. 
  
 Login or create new account
 Click “+new app” button
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-newapp.png“ height="300">
+<img src=“http://test.1871.by/documentation/v2/assets/gap-newapp.png“ height="300">
 Than click tab ”private” and “Upload a .zip file”
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-upload.png“ height="300">
+<img src=“http://test.1871.by/documentation/v2/assets/gap-upload.png“ height="300">
 Last step, click “Ready to build” button and wait 1-2 min
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-build.png“ height="300">
+<img src=“http://test.1871.by/documentation/v2/assets/gap-build.png“ height="300">
 Download your .apk and install. DONE! ))
 
-<img src=“https://github.com/ecma73/byvAdmin/blob/master/gap-apk.png“ height="300">
+<img src=“http://test.1871.by/documentation/v2/assets/gap-apk.png“ height="300">
 
 The recommended way to add a complete sign-in system to your app.
 
